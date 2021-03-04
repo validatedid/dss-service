@@ -1,6 +1,6 @@
 # Docker container for Digital Signature Service (eSignature) of CEF Digital
 
-DSS bundle app from CEF, version 5.7
+DSS bundle **DEMO** app from CEF, version 5.8
 
 ## Usage
 
