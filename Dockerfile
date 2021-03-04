@@ -1,4 +1,5 @@
-FROM openjdk:14-alpine
+FROM openjdk:8-jre-alpine
+
 LABEL maintainer="xavi.vila@validated.id"
 LABEL "author"="Xavier Vila"
 LABEL "company"="Validated ID"
@@ -11,7 +12,4 @@ RUN mv /tmp/dss-demo-bundle-5.8 /dss
 
 RUN chmod +x /dss/apache-tomcat-8.5.61/bin/catalina.sh
 
-COPY ./startup.sh /dss/
-
-ENTRYPOINT [ "/dss/startup.sh" ]
-CMD [ "/bin/sh" ]
+CMD ["/dss/apache-tomcat-8.5.61/bin/catalina.sh", "run"]
